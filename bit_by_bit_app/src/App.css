@@ -1,15 +1,37 @@
 
 .Button {
-  textDecoration:none;
-  textColor:green;
+  text-decoration:none;
+  text-color:green;
 }
 
 #Title {
-  textColor: green;
+  textColor:green;
 }
 
-.App {
+ul {
+  list-style:none;
+}
+
+ul li a {
+  text-decoration:none;
+}
+ul li a:hover {
+  text-color:blue;
+}
+/*.App {
   text-align: center;
+}
+*/
+
+.section_left {
+  margin-left:10%;
+}
+
+.section_center {
+  align-items: center;
+  text-align: center;
+  margin-left:10%;
+  margin-right: 10%;
 }
 
 .App-logo {

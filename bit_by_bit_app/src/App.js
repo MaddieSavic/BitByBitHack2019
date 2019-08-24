@@ -32,8 +32,8 @@ class Button extends React.Component{
   render(){
     return(
       <div>
-      <ul id="Button" style={{color:"green"}} onClick ={this.handleClick}>
-        <li><a style={{TextDecoration:"none"}} href="">{this.props.caption}</a></li>
+      <ul className="Button" onClick ={this.handleClick}>
+        <li><a href="">{this.props.caption}</a></li>
       </ul>
       <p>{this.state.isToggleOn}</p>
       </div>
@@ -48,13 +48,13 @@ function App() {
         <h1 idName = "Title">Pixel Labs</h1>
       </header>
       <body>
-        <Section headerName = "Target_char" name = "Target: "></Section>
-        <Section headerName = "Current_char" name = "Current: "></Section>
-        <Section headerName = "Partner_char" name = "Partner: "></Section>
-        <Section headerName = "Match_chars" name = "">
+        <Section className="section_center" headerName = "Target_char" name = "Target: "></Section>
+        <Section className="section_left" headerName = "Current_char" name = "Current: "></Section>
+        <Section className="section_right" headerName = "Partner_char" name = "Partner: "></Section>
+        <Section className="section_center" headerName = "Match_chars" name = "">
           <Button caption = "Matched!"/>
         </Section>
-        <Section headerName = "Children_chars" name = "Offspring"></Section>
+        <Section className="section_center" headerName = "Children_chars" name = "Offspring"></Section>
       </body>
     </div>
   );
