@@ -2,9 +2,6 @@ import React from 'react';
 import styles from './App.css';
 
 class Section extends React.Component{
-  constructor(props){
-    super(props);
-  }
   render(){
   return(
     <div idName = {this.props.headerName}>
@@ -32,8 +29,13 @@ class Button extends React.Component{
   render(){
     return(
       <div>
+<<<<<<< HEAD
       <ul className={styles.Button} onClick ={this.handleClick}>
         <li><a href="">{this.props.caption}</a></li>
+=======
+      <ul className="Button" onClick ={this.handleClick}>
+        <li>{this.props.caption}</li>
+>>>>>>> 2cdc15645f077c67e3fec2db0e54c2a8dbc1415b
       </ul>
       <p>{this.state.isToggleOn}</p>
       </div>
@@ -45,7 +47,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1 idName = "Title">Pixel Labs</h1>
+        <h1 idName = "Title">Meet Your Match!</h1>
       </header>
       <body>
         <Section className="section_center" headerName = "Target_char" name = "Target: "></Section>
