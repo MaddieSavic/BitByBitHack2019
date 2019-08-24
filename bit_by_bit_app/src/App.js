@@ -43,6 +43,17 @@ class Button extends React.Component{
   }
 }
 
+class Cube extends React.Component(){
+  constructor(props){
+    super(props);
+  }
+  render(){
+    return(
+      <div className = "Box"></div>
+    );
+  }
+}
+
 function App() {
   return (
     <div className="App">
@@ -50,11 +61,19 @@ function App() {
         <h1 idName = "Title">Pixel Labs</h1>
       </header>
       <body>
+<<<<<<< HEAD
         <Section className="section_center" headerName = "Target_char" name = "Target: "></Section>
         <Section className="section_left" headerName = "Current_char" name = "Current: "></Section>
         <Section className="section_right" headerName = "Partner_char" name = "Partner: "></Section>
         <Section className="section_center" headerName = "Match_chars" name = "">
         <Button caption = "Matched!"/>
+=======
+        <Section headerName = "Target_char" name = "Target: "><Cube></Cube></Section>
+        <Section headerName = "Current_char" name = "Current: "></Section>
+        <Section headerName = "Partner_char" name = "Partner: "></Section>
+        <Section headerName = "Match_chars" name = "">
+          <Button buttonName = "Match!"></Button>
+>>>>>>> Cube component added
         </Section>
         <Section className="section_center" headerName = "Children_chars" name = "Offspring"></Section>
       </body>
