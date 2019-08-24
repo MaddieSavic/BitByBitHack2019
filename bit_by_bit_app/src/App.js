@@ -2,9 +2,6 @@ import React from 'react';
 import './App.css';
 
 class Section extends React.Component{
-  constructor(props){
-    super(props);
-  }
   render(){
   return(
     <div idName = {this.props.headerName}>
@@ -16,7 +13,7 @@ class Section extends React.Component{
   )
   }
 }
-
+//For any button
 class Button extends React.Component{
   constructor(props){
     super(props);
@@ -28,9 +25,15 @@ class Button extends React.Component{
       isToggleOn: !state.isToggleOn
     }));
   }
+  //html of button
   render(){
     return(
-      <button idName = "button" onClick = {this.handleClick}>Match!</button>
+      <div>
+      <ul className="Button" onClick ={this.handleClick}>
+        <li>{this.props.caption}</li>
+      </ul>
+      <p>{this.state.isToggleOn}</p>
+      </div>
     )
   }
 }
@@ -42,13 +45,13 @@ function App() {
         <h1 idName = "Title">Meet Your Match!</h1>
       </header>
       <body>
-        <Section headerName = "Target_char" name = "Target: "></Section>
-        <Section headerName = "Current_char" name = "Current: "></Section>
-        <Section headerName = "Partner_char" name = "Partner: "></Section>
-        <Section headerName = "Match_chars" name = "">
-          <Button buttonName = "Match!"></Button>
+        <Section className="section_center" headerName = "Target_char" name = "Target: "></Section>
+        <Section className="section_left" headerName = "Current_char" name = "Current: "></Section>
+        <Section className="section_right" headerName = "Partner_char" name = "Partner: "></Section>
+        <Section className="section_center" headerName = "Match_chars" name = "">
+        <Button caption = "Matched!"/>
         </Section>
-        <Section headerName = "Children_chars" name = "Offspring"></Section>
+        <Section className="section_center" headerName = "Children_chars" name = "Offspring"></Section>
       </body>
     </div>
   );
