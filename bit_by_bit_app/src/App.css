@@ -1,11 +1,11 @@
 
 Button {
   text-decoration:none;
-  text-color:green;
+  color:green;
 }
 
 #Title {
-  textColor:green;
+  color:green;
 }
 
 ul {
@@ -16,7 +16,7 @@ ul li a {
   text-decoration:none;
 }
 ul li a:hover {
-  text-color:blue;
+  color:blue;
 }
 /*.App {
   text-align: center;
@@ -34,12 +34,6 @@ ul li a:hover {
   margin-right: 10%;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -51,15 +45,7 @@ ul li a:hover {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.App{
+    background-color: #282c34;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
