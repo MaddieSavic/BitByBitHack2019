@@ -42,7 +42,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1 idName = "Title">Pixel Labs</h1>
+        <h1 idName = "Title">Meet Your Match!</h1>
       </header>
       <body>
         <Section className="section_center" headerName = "Target_char" name = "Target: "></Section>
