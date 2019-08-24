@@ -33,7 +33,7 @@ class Button extends React.Component{
   render(){
     return(
       <div className = "btn">
-        <a onClick = {this.handleClick}>Match!</a>
+        <button type="button" class="btn btn-primary" onClick = {this.handleClick}>Primary</button>
         <h2>{this.state.isToggleOn}</h2>
       </div>
       
@@ -64,7 +64,7 @@ class App extends React.Component{
       </header>
       <body>
         <Section headerName = "Target_char" name = "Target: " cond = {true}><Cube></Cube></Section>
-        <div className = "sideBySide">
+        <div className = "container">
           <Section id = "left" headerName = "Current_char" name = "Current: " cond = {true}><Cube></Cube></Section>
           <Section id = "right"headerName = "Partner_char" name = "Partner: " cond = {true}><Cube></Cube></Section>
         </div>
