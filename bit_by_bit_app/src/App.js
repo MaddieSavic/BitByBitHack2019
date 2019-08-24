@@ -35,6 +35,17 @@ class Button extends React.Component{
   }
 }
 
+class Cube extends React.Component(){
+  constructor(props){
+    super(props);
+  }
+  render(){
+    return(
+      <div className = "Box"></div>
+    );
+  }
+}
+
 function App() {
   return (
     <div className="App">
@@ -42,7 +53,7 @@ function App() {
         <h1 idName = "Title">Meet Your Match!</h1>
       </header>
       <body>
-        <Section headerName = "Target_char" name = "Target: "></Section>
+        <Section headerName = "Target_char" name = "Target: "><Cube></Cube></Section>
         <Section headerName = "Current_char" name = "Current: "></Section>
         <Section headerName = "Partner_char" name = "Partner: "></Section>
         <Section headerName = "Match_chars" name = "">
