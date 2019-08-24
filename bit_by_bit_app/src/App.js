@@ -65,7 +65,7 @@ class App extends React.Component{
       </header>
       <body>
         <Section headerName = "Target_char" name = "Target: " cond = {true}><Cube></Cube></Section>
-        <div className = "sideBySide">
+        <div className = "container">
           <Section id = "left" headerName = "Current_char" name = "Current: " cond = {true}><Cube></Cube></Section>
           <Section id = "right"headerName = "Partner_char" name = "Partner: " cond = {true}><Cube></Cube></Section>
         </div>

@@ -82,14 +82,9 @@ div{
   text-align: center;
 }
 
-#Title {
-  color: cyan;
-}
-
-.sideBySide{
-  border: 1px solid black;
+.container{
   overflow: hidden;
-  display: flex;
+  padding: 10px;
 }
 
 #left{
@@ -99,5 +94,5 @@ div{
 
 #right{
   float: left;
-  margin-left: 20px;
+  margin-left: 300px;
 }
