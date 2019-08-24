@@ -32,7 +32,7 @@ class Button extends React.Component{
   render(){
     return(
       <div>
-      <ul className={App.Button} onClick ={this.handleClick}>
+      <ul className={styles.Button} onClick ={this.handleClick}>
         <li><a href="">{this.props.caption}</a></li>
       </ul>
       <p>{this.state.isToggleOn}</p>
