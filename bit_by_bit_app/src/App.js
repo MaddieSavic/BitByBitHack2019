@@ -16,7 +16,7 @@ class Section extends React.Component{
   )
   }
 }
-
+//For any button
 class Button extends React.Component{
   constructor(props){
     super(props);
@@ -28,9 +28,15 @@ class Button extends React.Component{
       isToggleOn: !state.isToggleOn
     }));
   }
+  //html of button
   render(){
     return(
-      <button idName = "button" onClick = {this.handleClick}>Match!</button>
+      <div>
+      <ul id="Button" style={{color:"green"}} onClick ={this.handleClick}>
+        <li><a style={{TextDecoration:"none"}} href="">{this.props.caption}</a></li>
+      </ul>
+      <p>{this.state.isToggleOn}</p>
+      </div>
     )
   }
 }
@@ -39,14 +45,14 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1 idName = "Title">App Title</h1>
+        <h1 idName = "Title">Pixel Labs</h1>
       </header>
       <body>
         <Section headerName = "Target_char" name = "Target: "></Section>
         <Section headerName = "Current_char" name = "Current: "></Section>
         <Section headerName = "Partner_char" name = "Partner: "></Section>
         <Section headerName = "Match_chars" name = "">
-          <Button buttonName = "Match!"></Button>
+          <Button caption = "Matched!"/>
         </Section>
         <Section headerName = "Children_chars" name = "Offspring"></Section>
       </body>
