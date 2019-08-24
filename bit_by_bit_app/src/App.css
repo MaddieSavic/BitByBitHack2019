@@ -1,42 +1,50 @@
 .App {
-
+  text-align: center;
   background-color: #282c34;
   color: white;
 }
 
-Button {
-  text-decoration:none;
-  color:green;
+.btn{
+    /* default for <button>, but useful for <a> */
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+  
+    /* create a small space when buttons wrap on 2 lines */
+    /*margin: 1px 0;*/
+    /* invisible border (will be colored on hover/focus) */
+    border: solid 1px transparent;
+    border-radius: 4px;
+  
+    /* size comes from text & padding (no width/height) */
+    padding: 0.5em 0.5em;
+  
+    /* make sure colors have enough contrast! */
+    color: #ffffff;
+    background-color: #9555af;
+    outline: none;
+
+}
+
+.btn:active {
+  transform: translateY(1px);
+  filter: saturate(150%);
+}
+
+.btn:hover {
+  color: #9555af;
+  border-color: currentColor;
+  background-color: white;
+}
+.btn:hover,
+.btn:focus {
+  color: #9555af;
+  border-color: currentColor;
+  background-color: white;
 }
 
 #Title {
   color:green;
-}
-
-ul {
-  list-style:none;
-}
-
-ul li{
-  text-decoration:none;
-}
-ul li:hover {
-  color:blue;
-}
-/*.App {
-  text-align: center;
-}
-*/
-
-.section_left {
-  margin-left:10%;
-}
-
-.section_center {
-  align-items: center;
-  text-align: center;
-  margin-left:10%;
-  margin-right: 10%;
 }
 
 .App-header {
@@ -48,40 +56,19 @@ ul li:hover {
   font-size: calc(10px + 1vmin);
 }
 
-.box {
-  border: 1px solid white;
-}
-
-#title{
-  text-align: left;
-}
-
-Section{
-  text-align: center;
-}
-
-Button {
-  text-Decoration:none;
-  color:green;
+.Box {
+  border: 1px solid black;
+  background-color: black;
+  border-radius: 3px;
+  width: 200px;
+  height: 200px;
+  align-content: center;
 
 }
+
 
 #Title {
-  color: green;
+  color: cyan;
 }
 
-ul {
-  list-style:none;
-}
-
-ul li{
-  text-decoration:none;
-}
-ul li:hover {
-  color:cyan;
-}
-/*.App {
-  text-align: center;
-}
-*/
 
