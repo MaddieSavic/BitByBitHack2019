@@ -3,27 +3,31 @@ import styles from './App.css';
 
 class Section extends React.Component{
   render(){
-  return(
-    <div idName = {this.props.headerName}>
+    if(this.props.cond){
+      return(
+      <div idName = {this.props.headerName}>
     <h2 className = "subheader">
       {this.props.name}
     </h2>
     {this.props.children}
     </div>
-  )
+      );
+    }
+    else{
+      return null;
+    }
   }
 }
 //For any button
 class Button extends React.Component{
   constructor(props){
     super(props);
-    this.state = {isToggleOn: false};
+    this.state = {isToggleOn: false, show_child: this.props.show_child};
     this.handleClick = this.handleClick.bind(this);
   }
   handleClick(){
-    this.setState(state => ({
-      isToggleOn: !state.isToggleOn
-    }));
+    alert("Match was clicked");
+    this.setState(state=> ({show_child: !state.show_child}));
   }
   //html of button
   render(){
@@ -41,12 +45,19 @@ class Button extends React.Component{
 class Cube extends React.Component{
   render(){
     return(
-      <div className = "Box"></div>
+      <div className = "Box">
+        <h2>This will be a cube</h2>
+      </div>
     );
   }
 }
 
-function App() {
+class App extends React.Component{
+  constructor(props){
+    super(props);
+    this.state ={show_child: false}
+  }
+  render(){
   return (
     <div className="App">
       <header className="App-header">
@@ -59,10 +70,11 @@ function App() {
         <Section className="section_center" headerName = "Match_chars" name = "">
         <Button caption = "Matched!"/>
         </Section>
-        <Section className="section_center" headerName = "Children_chars" name = "Offspring"></Section>
+        <Section className="Children_chars" headerName = "Children_chars" name = "Offspring" cond = {this.state.show_child}></Section>
       </body>
     </div>
   );
+  }
   }
 
 export default App;
