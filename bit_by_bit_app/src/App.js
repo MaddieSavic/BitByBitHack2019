@@ -52,7 +52,7 @@ function App() {
         <Section className="section_left" headerName = "Current_char" name = "Current: "></Section>
         <Section className="section_right" headerName = "Partner_char" name = "Partner: "></Section>
         <Section className="section_center" headerName = "Match_chars" name = "">
-          <Button caption = "Matched!"/>
+        <Button caption = "Matched!"/>
         </Section>
         <Section className="section_center" headerName = "Children_chars" name = "Offspring"></Section>
       </body>
