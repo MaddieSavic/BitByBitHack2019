@@ -2,9 +2,6 @@ import React from 'react';
 import './App.css';
 
 class Section extends React.Component{
-  constructor(props){
-    super(props);
-  }
   render(){
   return(
     <div idName = {this.props.headerName}>
@@ -30,15 +27,12 @@ class Button extends React.Component{
   }
   render(){
     return(
-      <button idName = "button" onClick = {this.handleClick}>Match!</button>
+      <ul><li onClick = {this.handleClick}>Match!</li></ul>
     )
   }
 }
 
 class Cube extends React.Component{
-  constructor(props){
-    super(props);
-  }
   render(){
     return(
       <div className = "Box"></div>
