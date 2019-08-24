@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import styles from './App.css';
 
 class Section extends React.Component{
   constructor(props){
@@ -32,7 +32,7 @@ class Button extends React.Component{
   render(){
     return(
       <div>
-      <ul className="Button" onClick ={this.handleClick}>
+      <ul className={App.Button} onClick ={this.handleClick}>
         <li><a href="">{this.props.caption}</a></li>
       </ul>
       <p>{this.state.isToggleOn}</p>
