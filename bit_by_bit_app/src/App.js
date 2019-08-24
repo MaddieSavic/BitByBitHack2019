@@ -35,7 +35,7 @@ class Button extends React.Component{
   }
 }
 
-class Cube extends React.Component(){
+class Cube extends React.Component{
   constructor(props){
     super(props);
   }
