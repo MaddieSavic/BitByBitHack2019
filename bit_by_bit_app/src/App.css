@@ -2,6 +2,7 @@
   text-align: center;
   background-color: #282c34;
   color: white;
+  overflow: auto;
 }
 
 .btn{
@@ -43,10 +44,6 @@
   background-color: white;
 }
 
-#Title {
-  color:green;
-}
-
 .App-header {
   min-height: 10vh;
   display: flex;
@@ -60,15 +57,37 @@
   border: 1px solid black;
   background-color: black;
   border-radius: 3px;
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   align-content: center;
-
+  justify-content: center;
+  position: relative;
+  margin: auto;
 }
 
+div{
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
 
 #Title {
   color: cyan;
 }
 
+.sideBySide{
+  border: 1px solid black;
+  overflow: hidden;
+  display: flex;
+}
+
+#left{
+  width: 200px;
+  float: left;
+}
+
+#right{
+  float: left;
+  margin-left: 20px;
+}
 
