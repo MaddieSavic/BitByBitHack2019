@@ -13,7 +13,7 @@ class Section extends React.Component{
   )
   }
 }
-
+//For any button
 class Button extends React.Component{
   constructor(props){
     super(props);
@@ -25,6 +25,7 @@ class Button extends React.Component{
       isToggleOn: !state.isToggleOn
     }));
   }
+  //html of button
   render(){
     return(
       <ul><li onClick = {this.handleClick}>Match!</li></ul>
@@ -53,7 +54,7 @@ function App() {
         <Section headerName = "Match_chars" name = "">
           <Button buttonName = "Match!"></Button>
         </Section>
-        <Section headerName = "Children_chars" name = "Offspring"></Section>
+        <Section className="section_center" headerName = "Children_chars" name = "Offspring"></Section>
       </body>
     </div>
   );
