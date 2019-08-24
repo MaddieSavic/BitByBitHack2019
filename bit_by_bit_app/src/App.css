@@ -1,6 +1,30 @@
-.Button {
-  text-decoration:none;
-  color:green;
+.App {
+  text-align: center;
+  background-color: #282c34;
+  color: white;
+  overflow: auto;
+}
+
+.btn{
+    /* default for <button>, but useful for <a> */
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+
+    /* create a small space when buttons wrap on 2 lines */
+    /*margin: 1px 0;*/
+    /* invisible border (will be colored on hover/focus) */
+    border: solid 1px transparent;
+    border-radius: 4px;
+
+    /* size comes from text & padding (no width/height) */
+    padding: 0.5em 0.5em;
+
+    /* make sure colors have enough contrast! */
+    color: #ffffff;
+    background-color: #9555af;
+    outline: none;
+
 }
 
 .btn:active {
@@ -40,10 +64,40 @@
   font-size: calc(10px + 1vmin);
 }
 
-.App{
-    background-color: #282c34;
+.Box {
+  border: 1px solid black;
+  background-color: black;
+  border-radius: 3px;
+  width: 150px;
+  height: 150px;
+  align-content: center;
+  justify-content: center;
+  position: relative;
+  margin: auto;
+}
+
+div{
+  justify-content: center;
+  align-content: center;
+  text-align: center;
 }
 
 #Title {
   color: cyan;
+}
+
+.sideBySide{
+  border: 1px solid black;
+  overflow: hidden;
+  display: flex;
+}
+
+#left{
+  width: 200px;
+  float: left;
+}
+
+#right{
+  float: left;
+  margin-left: 20px;
 }
