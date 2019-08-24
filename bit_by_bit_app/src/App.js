@@ -2,9 +2,6 @@ import React from 'react';
 import './App.css';
 
 class Section extends React.Component{
-  constructor(props){
-    super(props);
-  }
   render(){
   return(
     <div idName = {this.props.headerName}>
@@ -33,7 +30,7 @@ class Button extends React.Component{
     return(
       <div>
       <ul className="Button" onClick ={this.handleClick}>
-        <li><a href="">{this.props.caption}</a></li>
+        <li>{this.props.caption}</li>
       </ul>
       <p>{this.state.isToggleOn}</p>
       </div>
