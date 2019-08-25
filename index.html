@@ -1,19 +1,11 @@
-<p>Helloo</p>
-<b>WHAT ARE THOSEEE</b>
-
-
-
+<div style="float:left; position: absolute;padding-bottom:10%;z-index:-1;">
+    <img src="static/logo.png" style="
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    width:50%;">
+</div>
 <script>
-
-    <!--fetch('/hello').then(function (response) {-->
-        <!--return response.text();-->
-    <!--}).then(function (text) {-->
-
-        <!--document.getElementById('imagebox').src = 'static/' + text.substring(1, text.length - 2).toLowerCase();-->
-
-    <!--});-->
-
-
     fetch('/hello').then(function (response) {
         return response.json(); // But parse it as JSON this time
     }).then(function (json) {
@@ -29,8 +21,8 @@
         document.getElementById('targetFace').src = 'static/' + json[1][0];
 
 
-        document.getElementById('parent1Text').innerHTML = json[2]["body"]["alleles"];
-        document.getElementById('parent2Text').innerHTML = json[3]["body"]["alleles"];
+        document.getElementById('parent1Text').innerHTML = "Alleles?: " + json[2]["body"]["alleles"] + " horns?: " + json[2]["horns"];
+        document.getElementById('parent2Text').innerHTML = "Alleles?: " + json[3]["body"]["alleles"] + " horns?: " + json[2]["horns"];
 
     })
 
@@ -38,8 +30,13 @@
 
 
 
-<div style="float:left;">
-<h1 id="parent1Text"> </h1>
+<div style="float:left;padding-top:10%;">
+<b id="parent1Text" style="position:absolute;
+    top:10%;
+    left:5%;
+    z-index:0;
+    height: 30%;
+    float:left;"> </b>
 
 <img src = "" alt="this is a test" id = "bodyPic" style = "
     position:absolute;
@@ -59,7 +56,6 @@
 
 <img src = "" alt="this is a test" id = "facePic" style = "
     position:absolute;
-    top:100;
     top:20%;
     left:0;
     z-index:2;
@@ -70,31 +66,41 @@
 
 
 
-
-<div>
-<h1 id="parent2Text"> </h1>
-<img src = "" alt="this is a test" id = "targetBody" style = "
+<b id="parent2Text" style = "
     position:absolute;
-    top:20%;
+    top:30%;
     left:50%;
     z-index:0;
-    height: 30%
+    height: 30%;
+    float:right;
+"> </b>
+<div style="float:right; margin-top:10%;">
+
+<img src = "" alt="this is a test" id = "targetBody" style = "
+    position:absolute;
+    top:30%;
+    left:50%;
+    z-index:0;
+    height: 30%;
+    float:right;
 ">
 <img src = "" alt="this is a test" id = "targetHorns" style = "
     position:absolute;
-    top:20%;
+    top:30%;
     left:50%;
     z-index:1;
-    height: 30%
+    height: 30%;
+    float:right;
 
 ">
 
 <img src = "" alt="this is a test" id = "targetFace" style = "
     position:absolute;
-    top:20%;
+    top:30%;
     left:50%;
     z-index:2;
-    height: 30%
+    height: 30%;
+    float:right;
 ">
 
 </div>
@@ -104,19 +110,26 @@
     position:absolute;
     top:50%;
     left:25%;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:10%;
+    width:50%;
 ">
-<h1 id="childText">This is the outcome</h1>
+<b style="top:-10%;" id="childText">This is the outcome</b>
 <img src = 'static/blank.png' alt="" id = "childBody" style = "
     position:absolute;
     z-index:0;
     left: 0;
-    height: 300%;
+    height: 500%;
+
 ">
 <img src = 'static/blank.png' alt="" id = "childHorns" style = "
     position:absolute;
     z-index:1;
     left: 0;
-    height: 300%;
+    height: 500%;
+
 
 
 ">
@@ -125,37 +138,15 @@
     z-index:2;
     position:absolute;
     left: 0;
-    height: 300%;
+    height: 500%;
+
 
 ">
 
 </div>
 
 
-<input type = "button" value = "BONNEEEE" onclick="
-// POST
-fetch('/hello', {
-
-    // Specify the method
-    method: 'POST',
-
-    // A JSON payload
-    body: JSON.stringify({
-        greeting: &quot;Hello from the browser!&quot;,
-        test: &quot;BIG BOOTY CLUB!&quot;
-    })
-}).then(function (response) { // At this point, Flask has printed our JSON
-    return response.text();
-}).then(function (text) {
-
-    console.log('POST response: ');
-
-    // Should be 'OK' if everything was successful
-    console.log(text);
-});"
->
-
-<input type="button" value="SWAP" onclick="
+<input type="button" style="z-index:5;" value="Mate" onclick="
     fetch('/getBoi', {method: 'POST', body: JSON.stringify({
 
 
@@ -171,7 +162,8 @@ fetch('/hello', {
 
 
 
-   document.getElementById('childText').innerHTML = json[1][&quot;body&quot;][&quot;alleles&quot;];
+   document.getElementById('childText').innerHTML =  &quot;...................&quot; +  &quot;Alleles?: &quot; + json[1][&quot;body&quot;][&quot;alleles&quot;]  + &quot; Horns? &quot; +  json[1][&quot;horns&quot;];
+
    console.log(json)
 
 });

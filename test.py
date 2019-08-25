@@ -25,9 +25,11 @@ class alleleEnum:
 class cuboid:
     def __init__(self):
         self.alleles = alleleEnum()
+        llist = [self.alleles.RED, self.alleles.BLUE, self.alleles.YELLOW, self.alleles.GREEN]
+
         self.JSONValues = {
             "body":{
-                "alleles":[self.alleles.BLUE, self.alleles.BLUE]  #the alleles for the body, stored as BLACK BLACK by default
+                "alleles":[llist[random.randint(0, 3)], llist[random.randint(0, 3)]]  #the alleles for the body, stored as BLACK BLACK by default
             },
             "horns":False,  # This is the gender based characteristic, can either be present or not
             "face": "face" + str(random.randint(1, 8)) + ".png"
@@ -114,8 +116,9 @@ class cuboid:
 #TEST DATA PLEASE REMOVE
 testBoi = cuboid()
 testBoi.JSONValues["horns"] = True
-testBoi.JSONValues["body"]["alleles"][0] = testBoi.alleles.RED
-testBoi.JSONValues["body"]["alleles"][1] = testBoi.alleles.BLUE
+llist = [testBoi.alleles.RED, testBoi.alleles.BLUE, testBoi.alleles.YELLOW, testBoi.alleles.GREEN]
+testBoi.JSONValues["body"]["alleles"][0] = llist[random.randint(0, 3)]
+testBoi.JSONValues["body"]["alleles"][1] = llist[random.randint(0, 3)]
 
 testSuitor = cuboid()
 
