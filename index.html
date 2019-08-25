@@ -1,0 +1,175 @@
+<div style="float:left; position: absolute;padding-bottom:10%;z-index:-1;">
+    <img src="static/logo.png" style="
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    width:50%;">
+</div>
+<script>
+    fetch('/hello').then(function (response) {
+        return response.json(); // But parse it as JSON this time
+    }).then(function (json) {
+
+        console.log(json); // Here’s our JSON object
+
+        document.getElementById('bodyPic').src = 'static/' + json[0][2];
+        document.getElementById('hornsPic').src = 'static/' + json[0][1];
+        document.getElementById('facePic').src = 'static/' + json[0][0];
+
+        document.getElementById('targetBody').src = 'static/' + json[1][2];
+        document.getElementById('targetHorns').src = 'static/' + json[1][1];
+        document.getElementById('targetFace').src = 'static/' + json[1][0];
+
+
+        document.getElementById('parent1Text').innerHTML = "Alleles?: " + json[2]["body"]["alleles"] + " horns?: " + json[2]["horns"];
+        document.getElementById('parent2Text').innerHTML = "Alleles?: " + json[3]["body"]["alleles"] + " horns?: " + json[2]["horns"];
+
+    })
+
+</script>
+
+
+
+<div style="float:left;padding-top:10%;">
+<b id="parent1Text" style="position:absolute;
+    top:10%;
+    left:5%;
+    z-index:0;
+    height: 30%;
+    float:left;"> </b>
+
+<img src = "" alt="this is a test" id = "bodyPic" style = "
+    position:absolute;
+    top:20%;
+    left:0;
+    z-index:0;
+    height: 30%
+">
+<img src = "" alt="this is a test" id = "hornsPic" style = "
+    position:absolute;
+    top:20%;
+    left:0;
+    z-index:1;
+    height: 30%
+
+">
+
+<img src = "" alt="this is a test" id = "facePic" style = "
+    position:absolute;
+    top:20%;
+    left:0;
+    z-index:2;
+    height: 30%
+">
+
+</div>
+
+
+
+<b id="parent2Text" style = "
+    position:absolute;
+    top:30%;
+    left:50%;
+    z-index:0;
+    height: 30%;
+    float:right;
+"> </b>
+<div style="float:right; margin-top:10%;">
+
+<img src = "" alt="this is a test" id = "targetBody" style = "
+    position:absolute;
+    top:30%;
+    left:50%;
+    z-index:0;
+    height: 30%;
+    float:right;
+">
+<img src = "" alt="this is a test" id = "targetHorns" style = "
+    position:absolute;
+    top:30%;
+    left:50%;
+    z-index:1;
+    height: 30%;
+    float:right;
+
+">
+
+<img src = "" alt="this is a test" id = "targetFace" style = "
+    position:absolute;
+    top:30%;
+    left:50%;
+    z-index:2;
+    height: 30%;
+    float:right;
+">
+
+</div>
+
+
+<div style="
+    position:absolute;
+    top:50%;
+    left:25%;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:10%;
+    width:50%;
+">
+<b style="top:-10%;" id="childText">This is the outcome</b>
+<img src = 'static/blank.png' alt="" id = "childBody" style = "
+    position:absolute;
+    z-index:0;
+    left: 0;
+    height: 500%;
+
+">
+<img src = 'static/blank.png' alt="" id = "childHorns" style = "
+    position:absolute;
+    z-index:1;
+    left: 0;
+    height: 500%;
+
+
+
+">
+
+<img src = 'static/blank.png' alt="" id = "childFace" style = "
+    z-index:2;
+    position:absolute;
+    left: 0;
+    height: 500%;
+
+
+">
+
+</div>
+
+
+<input type="button" style="z-index:5;" value="Mate" onclick="
+    fetch('/getBoi', {method: 'POST', body: JSON.stringify({
+
+
+        //'Dictionary' goes here
+        test: &quot;SWAP&quot;
+
+
+    })}).then(function (response) { return response.json();}).then(function (json) {
+
+    document.getElementById('childBody').src = 'static/' + json[0][2];
+   document.getElementById('childHorns').src = 'static/' + json[0][1];
+   document.getElementById('childFace').src = 'static/' + json[0][0];
+
+
+
+   document.getElementById('childText').innerHTML =  &quot;...................&quot; +  &quot;Alleles?: &quot; + json[1][&quot;body&quot;][&quot;alleles&quot;]  + &quot; Horns? &quot; +  json[1][&quot;horns&quot;];
+
+   console.log(json)
+
+});
+
+
+
+
+
+">
